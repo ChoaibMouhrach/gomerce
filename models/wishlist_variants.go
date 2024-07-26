@@ -1,8 +1,7 @@
-CREATE TABLE IF NOT EXISTS wishlist_variants (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+package models
 
-    user_id INT NOT NULL,
-    variant_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (variant_id) REFERENCES product_variants(id) ON DELETE CASCADE
-);
+type WishlistVariant struct {
+	Id        int `db:"id"`
+	UserId    int `db:"user_id"`
+	VariantId int `db:"variant_id"`
+}

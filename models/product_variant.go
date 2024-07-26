@@ -1,7 +1,8 @@
-CREATE TABLE IF NOT EXISTS product_variant (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    price FLOAT NOT NULL,
-    tax FLOAT NOT NULL,
-    product_id INT NOT NULL,
-    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
-);
+package models
+
+type ProductVariant struct {
+	Id         int     `db:"id"`
+	Price      float32 `db:"price"`
+	Tax        float32 `db:"tax"`
+	Product_id int     `db:"product_id"`
+}

@@ -1,5 +1,0 @@
-CREATE TABLE IF NOT EXISTS shipping_options (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE,
-    price FLOAT NOT NULL
-);

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS product_variant (
+CREATE TABLE IF NOT EXISTS product_variants (
     id INT AUTO_INCREMENT PRIMARY KEY,
     price FLOAT NOT NULL,
     tax FLOAT NOT NULL,

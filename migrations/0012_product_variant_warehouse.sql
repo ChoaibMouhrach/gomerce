@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS product_variants (
+CREATE TABLE IF NOT EXISTS product_variant_warehouse (
     id INT AUTO_INCREMENT PRIMARY KEY,
     stock INT NOT NULL,
     warehouse_id INT NOT NULL,

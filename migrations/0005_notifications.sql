@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS notifications (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title TEXT NOT NULL,
-    description TEXT NOT NULL,
+    description TEXT,
     read BOOLEAN NOT NULL DEFAULT FALSE,
     user_id INT,
     type_id INT NOT NULL,

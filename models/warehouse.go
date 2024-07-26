@@ -1,6 +1,6 @@
 package models
 
-type PaymentOption struct {
+type Warehouse struct {
 	Id   int    `db:"id"`
 	Name string `db:"name"`
 }
