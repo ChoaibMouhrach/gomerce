@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS order_items (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     tax FLOAT NOT NULL,
     price FLOAT NOT NULL,
     quantity INT NOT NULL,

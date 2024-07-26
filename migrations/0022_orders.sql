@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS orders (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     shipping_price FLOAT NOT NULL,
     user_id INT NOT NULL,
     status_id INT NOT NULL,

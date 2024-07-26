@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS product_variant_warehouse (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     stock INT NOT NULL,
     warehouse_id INT NOT NULL,
     variant_id INT NOT NULL,

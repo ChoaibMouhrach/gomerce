@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS notifications (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
     read BOOLEAN NOT NULL DEFAULT FALSE,

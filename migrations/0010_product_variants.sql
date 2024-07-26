@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS product_variants (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     price FLOAT NOT NULL,
     tax FLOAT NOT NULL,
     product_id INT NOT NULL,

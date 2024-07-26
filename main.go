@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gomerce/lib"
+	"gomerce/models"
 	"gomerce/routers"
 
 	"github.com/gofiber/fiber/v2"
@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	err := lib.InitDB()
+	err := models.InitDB()
 
 	if err != nil {
 		fmt.Println(err)

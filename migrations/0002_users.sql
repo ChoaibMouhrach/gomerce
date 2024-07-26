@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT NOT NULL,
+    id SERIAL PRIMARY KEY,
+    name TEXT,
     email TEXT NOT NULL UNIQUE,
-    phone TEXT NOT NULL,
+    phone TEXT,
     role_id INT NOT NULL,
     FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
 );

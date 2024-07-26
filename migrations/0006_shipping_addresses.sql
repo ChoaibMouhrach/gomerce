@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS shipping_addresses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     phone TEXT NOT NULL,
     address_1 TEXT NOT NULL,
     address_2 TEXT,
