@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS product_variant_keys (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    key TEXT NOT NULL
+);
