@@ -15,6 +15,7 @@ func GuestRouter() *fiber.App {
 	// AUTH
 	auth := controllers.Auth{}
 	app.Post("/sign-in", auth.SignIn)
+	app.Post("/auth", auth.Authenticate)
 
 	return app
 }

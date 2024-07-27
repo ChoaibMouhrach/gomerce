@@ -1,6 +1,7 @@
-CREATE TABLE IF NOT EXISTS sessions (
+CREATE TABLE IF NOT EXISTS magic_links (
     id SERIAL PRIMARY KEY,
-    session_id TEXT NOT NULL UNIQUE,
+    token TEXT NOT NULL UNIQUE,
+    expires TIMESTAMP NOT NULL,
     user_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );

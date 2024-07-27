@@ -9,10 +9,30 @@ import (
 
 var instance *validator.Validate
 
-func Validate(c *fiber.Ctx, input interface{}) *map[string]string {
+func Validate(input interface{}) *map[string]string {
+	if instance == nil {
+		instance = validator.New(validator.WithRequiredStructEnabled())
+	}
+
+	err := instance.Struct(input)
+
+	if err == nil {
+		return nil
+	}
+
+	errs := map[string]string{}
+
+	for _, err := range err.(validator.ValidationErrors) {
+		errs[err.Field()] = err.ActualTag()
+	}
+
+	return &errs
+}
+
+func ValidateRequest(c *fiber.Ctx, input interface{}) *map[string]string {
 	if c.BodyParser(input) != nil {
 		return &map[string]string{
-			"error": "unable to parse body to json",
+			"error": "Something went wrong",
 		}
 	}
 

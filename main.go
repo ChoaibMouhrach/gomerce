@@ -2,22 +2,27 @@ package main
 
 import (
 	"fmt"
+	"gomerce/lib"
 	"gomerce/models"
 	"gomerce/routers"
 
 	"github.com/gofiber/fiber/v2"
-	_ "github.com/mattn/go-sqlite3"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 )
 
 func main() {
-	err := models.InitDB()
+	if err := lib.InitENV(); err != nil {
+		fmt.Println(err)
+		return
+	}
 
-	if err != nil {
+	if err := models.InitDB(); err != nil {
 		fmt.Println(err)
 		return
 	}
 
 	app := fiber.New()
+	app.Use(logger.New())
 
 	app.Mount("/api", routers.New())
 
